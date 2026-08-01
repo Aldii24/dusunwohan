@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 900" preserveAspectRatio="xMidYMax slice">
+  <!-- Panorama dusun: langit transparan, gunung berlapis, sawah berundak -->
+  <circle cx="1880" cy="210" r="130" fill="#e2a83f"/>
+  <circle cx="1880" cy="210" r="170" fill="none" stroke="#e2a83f" stroke-opacity="0.3" stroke-width="4"/>
+  <g stroke="#4a3d2c" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.55">
+    <path d="M520 210 q18 -18 36 0 q18 -18 36 0"/>
+    <path d="M960 140 q16 -16 32 0 q16 -16 32 0"/>
+    <path d="M1500 120 q16 -16 32 0 q16 -16 32 0"/>
+  </g>
+  <path d="M-80 620 L560 180 Q590 158 620 180 L1260 620 Z" fill="#b3c4a3" opacity="0.9"/>
+  <path d="M508 250 L560 206 Q590 184 620 206 L672 250 L620 292 L590 268 L560 298 L534 272 Z" fill="#f6efdd"/>
+  <path d="M1240 640 L1750 300 Q1780 280 1810 300 L2320 640 Z" fill="#9db387" opacity="0.9"/>
+  <path d="M2100 660 L2320 470 L2480 660 Z" fill="#b3c4a3" opacity="0.85"/>
+  <path d="M0 662 Q400 580 860 632 T1800 622 Q2140 606 2400 646 L2400 760 L0 760 Z" fill="#7d9c77"/>
+  <path d="M0 736 Q500 664 1100 712 T2400 704 L2400 820 L0 820 Z" fill="#567c5d"/>
+  <path d="M0 730 Q500 658 1100 706 T2400 698 L2400 712 Q1800 676 1100 720 T0 744 Z" fill="#f2ead6" opacity="0.4"/>
+  <path d="M0 800 Q560 744 1240 782 T2400 774 L2400 900 L0 900 Z" fill="#c9973d"/>
+  <path d="M0 794 Q560 738 1240 776 T2400 768 L2400 782 Q1800 748 1240 790 T0 808 Z" fill="#f2ead6" opacity="0.4"/>
+  <g stroke="#8a5a37" stroke-width="5" stroke-linecap="round" opacity="0.5">
+    <path d="M260 856 v-26 M320 862 v-28 M380 856 v-24 M440 864 v-28 M500 858 v-26"/>
+    <path d="M1300 852 v-26 M1360 858 v-28 M1420 852 v-24 M1480 860 v-28"/>
+    <path d="M2000 846 v-26 M2060 852 v-28 M2120 846 v-24 M2180 854 v-28"/>
+  </g>
+  <path d="M0 878 Q600 838 1300 868 T2400 860 L2400 900 L0 900 Z" fill="#3f6a4d"/>
+  <g fill="#2c5040">
+    <path d="M840 700 q8 -84 11 -90 q3 6 11 90 Z"/>
+    <path d="M851 612 q-54 -24 -78 -8 q38 -16 78 19 q40 -35 78 -19 q-24 -16 -78 8 Z"/>
+    <path d="M851 612 q-34 -46 -27 -70 q6 30 29 62 q23 -32 29 -62 q7 24 -27 70 Z"/>
+  </g>
+  <g>
+    <rect x="1560" y="700" width="80" height="58" fill="#8a5a37"/>
+    <path d="M1544 704 L1600 654 L1656 704 Z" fill="#bf5f38"/>
+    <rect x="1586" y="722" width="24" height="36" fill="#43302a"/>
+  </g>
+  <g fill="#22402f">
+    <ellipse cx="180" cy="742" rx="64" ry="50"/>
+    <rect x="172" y="768" width="15" height="44"/>
+    <ellipse cx="2240" cy="736" rx="70" ry="54"/>
+    <rect x="2232" y="764" width="15" height="46"/>
+  </g>
+</svg>

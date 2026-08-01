@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5edd8"/>
+      <stop offset="1" stop-color="#ecdcb6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky7)"/>
+  <circle cx="600" cy="210" r="120" fill="#e2a83f" opacity="0.55"/>
+  <path d="M-60 430 L280 190 L620 430 Z" fill="#a8bd9c"/>
+  <path d="M580 430 L880 230 L1180 430 Z" fill="#8ba68a"/>
+  <path d="M0 460 Q300 420 640 446 T1200 442 L1200 800 L0 800 Z" fill="#6f9270"/>
+  <path d="M0 580 Q300 546 640 566 T1200 562 L1200 800 L0 800 Z" fill="#496f52"/>
+  <g>
+    <path d="M600 250 L488 560 L712 560 Z" fill="#3f6a4d"/>
+    <g fill="#c8402e">
+      <circle cx="600" cy="300" r="12"/>
+      <circle cx="570" cy="360" r="12"/>
+      <circle cx="632" cy="360" r="12"/>
+      <circle cx="545" cy="425" r="12"/>
+      <circle cx="600" cy="420" r="12"/>
+      <circle cx="656" cy="425" r="12"/>
+    </g>
+    <g fill="#e2a83f">
+      <circle cx="585" cy="330" r="10"/>
+      <circle cx="616" cy="330" r="10"/>
+      <circle cx="558" cy="392" r="10"/>
+      <circle cx="612" cy="388" r="10"/>
+      <circle cx="662" cy="392" r="10"/>
+      <circle cx="530" cy="470" r="10"/>
+      <circle cx="580" cy="470" r="10"/>
+      <circle cx="630" cy="470" r="10"/>
+      <circle cx="678" cy="470" r="10"/>
+    </g>
+    <g fill="#f2ead6">
+      <circle cx="600" cy="272" r="8"/>
+      <circle cx="572" cy="445" r="8"/>
+      <circle cx="640" cy="445" r="8"/>
+      <circle cx="556" cy="520" r="8"/>
+      <circle cx="606" cy="516" r="8"/>
+      <circle cx="654" cy="520" r="8"/>
+    </g>
+    <rect x="452" y="560" width="296" height="22" rx="8" fill="#8a5a37"/>
+    <path d="M470 582 v70 M560 582 v70 M660 582 v70 M730 582 v70" stroke="#8a5a37" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <g fill="#22402f">
+    <circle cx="330" cy="600" r="18"/><path d="M310 660 q20 -58 40 0 Z"/>
+    <circle cx="400" cy="614" r="18"/><path d="M380 674 q20 -58 40 0 Z"/>
+    <circle cx="820" cy="606" r="18"/><path d="M800 666 q20 -58 40 0 Z"/>
+    <circle cx="890" cy="618" r="18"/><path d="M870 678 q20 -58 40 0 Z"/>
+    <circle cx="260" cy="628" r="18"/><path d="M240 688 q20 -58 40 0 Z"/>
+    <circle cx="950" cy="632" r="18"/><path d="M930 692 q20 -58 40 0 Z"/>
+  </g>
+  <path d="M0 710 Q300 684 660 702 T1200 696 L1200 800 L0 800 Z" fill="#2c5040"/>
+</svg>

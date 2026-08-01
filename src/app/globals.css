@@ -1,26 +1,332 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", monospace;
+  --font-heading: var(--font-fraunces), Georgia, serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* ==== Palet khas Wohan ==== */
+  --color-forest: var(--forest);
+  --color-forest-deep: var(--forest-deep);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-soft: var(--terracotta-soft);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-cream: var(--cream);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-sage: var(--sage);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  /* Palet dasar: kertas hangat + hijau hutan + terakota + emas panen */
+  --cream: oklch(0.966 0.014 92);
+  --paper: oklch(0.982 0.009 95);
+  --ink: oklch(0.268 0.024 155);
+  --forest: oklch(0.435 0.068 158);
+  --forest-deep: oklch(0.305 0.048 158);
+  --terracotta: oklch(0.605 0.125 45);
+  --terracotta-soft: oklch(0.93 0.032 55);
+  --gold: oklch(0.775 0.115 82);
+  --gold-soft: oklch(0.93 0.05 90);
+  --sage: oklch(0.885 0.022 120);
+
+  --background: var(--cream);
+  --foreground: var(--ink);
+  --card: var(--paper);
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
+  --primary: var(--forest);
+  --primary-foreground: oklch(0.975 0.012 92);
+  --secondary: oklch(0.925 0.018 105);
+  --secondary-foreground: var(--forest-deep);
+  --muted: oklch(0.932 0.016 98);
+  --muted-foreground: oklch(0.5 0.028 140);
+  --accent: var(--terracotta-soft);
+  --accent-foreground: oklch(0.42 0.1 45);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.885 0.02 100);
+  --input: oklch(0.885 0.02 100);
+  --ring: var(--forest);
+  --chart-1: var(--forest);
+  --chart-2: var(--terracotta);
+  --chart-3: var(--gold);
+  --chart-4: oklch(0.62 0.05 158);
+  --chart-5: oklch(0.45 0.03 120);
+  --radius: 0.7rem;
+  --sidebar: var(--forest-deep);
+  --sidebar-foreground: oklch(0.93 0.02 100);
+  --sidebar-primary: var(--gold);
+  --sidebar-primary-foreground: var(--ink);
+  --sidebar-accent: oklch(0.37 0.05 158);
+  --sidebar-accent-foreground: oklch(0.96 0.015 92);
+  --sidebar-border: oklch(0.38 0.045 158);
+  --sidebar-ring: var(--gold);
+}
+
+.dark {
+  --background: oklch(0.24 0.022 155);
+  --foreground: oklch(0.95 0.015 95);
+  --card: oklch(0.28 0.026 155);
+  --card-foreground: oklch(0.95 0.015 95);
+  --popover: oklch(0.28 0.026 155);
+  --popover-foreground: oklch(0.95 0.015 95);
+  --primary: oklch(0.72 0.09 150);
+  --primary-foreground: oklch(0.22 0.03 155);
+  --secondary: oklch(0.33 0.03 155);
+  --secondary-foreground: oklch(0.95 0.015 95);
+  --muted: oklch(0.33 0.03 155);
+  --muted-foreground: oklch(0.72 0.025 120);
+  --accent: oklch(0.36 0.05 50);
+  --accent-foreground: oklch(0.93 0.03 60);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.72 0.09 150);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+  }
+  ::selection {
+    background: var(--terracotta);
+    color: var(--cream);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ============================================================
+   Utilitas khas situs Dusun Wohan
+   ============================================================ */
+
+/* Tekstur grain halus di atas seluruh halaman */
+.grain-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+}
+
+/* Pola kawung (batik) samar untuk latar section */
+.kawung {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%232f5d45' stroke-width='1'%3E%3Cellipse cx='14' cy='0' rx='9' ry='13'/%3E%3Cellipse cx='14' cy='56' rx='9' ry='13'/%3E%3Cellipse cx='42' cy='28' rx='9' ry='13'/%3E%3Cellipse cx='0' cy='28' rx='13' ry='9'/%3E%3Cellipse cx='56' cy='28' rx='13' ry='9'/%3E%3Cellipse cx='28' cy='14' rx='13' ry='9'/%3E%3Cellipse cx='28' cy='42' rx='13' ry='9'/%3E%3Ccircle cx='28' cy='28' r='2'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 56px 56px;
+}
+
+/* Animasi reveal saat elemen masuk viewport (dipicu komponen <Reveal/>) */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Marquee galeri */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 55s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+/* Link dengan garis bawah yang "tumbuh" */
+.link-grow {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1.5px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  padding-bottom: 2px;
+}
+.link-grow:hover {
+  background-size: 100% 1.5px;
+}
+
+/* Teks display outline (hero) */
+.text-outline {
+  -webkit-text-stroke: 1.5px var(--forest-deep);
+  color: transparent;
+}
+
+/* Artikel markdown */
+.prose-wohan {
+  font-size: 1.075rem;
+  line-height: 1.85;
+  color: color-mix(in oklab, var(--ink) 92%, transparent);
+}
+.prose-wohan > * + * {
+  margin-top: 1.15em;
+}
+.prose-wohan h2,
+.prose-wohan h3 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  color: var(--forest-deep);
+  line-height: 1.25;
+  margin-top: 1.9em;
+}
+.prose-wohan h2 {
+  font-size: 1.65em;
+  font-weight: 600;
+}
+.prose-wohan h3 {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.prose-wohan a {
+  color: var(--terracotta);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-wohan blockquote {
+  border-left: 3px solid var(--terracotta);
+  padding: 0.35em 0 0.35em 1.4em;
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-style: italic;
+  font-size: 1.18em;
+  color: var(--forest-deep);
+}
+.prose-wohan ul,
+.prose-wohan ol {
+  padding-left: 1.5em;
+}
+.prose-wohan ul {
+  list-style: disc;
+}
+.prose-wohan ol {
+  list-style: decimal;
+}
+.prose-wohan li + li {
+  margin-top: 0.45em;
+}
+.prose-wohan li::marker {
+  color: var(--terracotta);
+}
+.prose-wohan img {
+  border-radius: var(--radius-xl);
+  margin-block: 1.6em;
+}
+.prose-wohan hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin-block: 2.2em;
+}
+.prose-wohan strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+.prose-wohan code {
+  background: var(--muted);
+  border-radius: 0.35em;
+  padding: 0.15em 0.4em;
+  font-size: 0.9em;
+}
+.prose-wohan table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+}
+.prose-wohan th,
+.prose-wohan td {
+  border: 1px solid var(--border);
+  padding: 0.5em 0.8em;
+  text-align: left;
+}
+.prose-wohan th {
+  background: var(--muted);
+  font-weight: 600;
+}
+
+/* Scrollbar halus */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: color-mix(in oklab, var(--forest) 35%, transparent);
+  border-radius: 999px;
+  border: 2px solid var(--cream);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in oklab, var(--forest) 55%, transparent);
 }
