@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 interface RevealProps {
   children: ReactNode;
   className?: string;
-  /** Delay animasi dalam ms — untuk efek stagger antar-kartu */
+  /** Delay animasi dalam ms â€” untuk efek stagger antar-kartu */
   delay?: number;
 }
 
@@ -24,7 +24,7 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
           io.disconnect();
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -48px 0px" }
+      { threshold: 0, rootMargin: "0px 0px -48px 0px" }
     );
     io.observe(el);
     return () => io.disconnect();
